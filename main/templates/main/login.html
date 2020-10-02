@@ -1,0 +1,34 @@
+{% extends "main/header.html" %}
+
+{% block content %}
+<div class="card" style="width: 400px; margin-left: 25vw; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+    <div class="card-content">
+    <h1>Login</h1>
+    
+    <form style="text-align: center;" method="POST">
+        
+        {% csrf_token %}
+        <div style="display: flex;">
+            <label for="username" style="font-size: 1.5rem; margin-top: 10px; color: black;">username:</label>
+            <input style="margin-left: 10px; width: 200px;" type="text" name="username">
+        </div>
+        <br>
+
+        
+        <div style="display: flex;">
+            <label for="password" style="font-size: 1.5rem; margin-top: 10px; color: black;">password:</label>
+            <input style="margin-left: 10px; width: 200px;" type="password" name="password">
+        </div>
+        <br>
+
+
+
+        <button class="btn" style="background-color: blanchedalmond; color: rgb(2, 0, 3);" type="submit">Login</button>
+    
+    </form>
+    </div>
+    <p>
+    If you don't have an account, <a href="/register"><strong>Register</strong></a> first.
+    </p>
+</div>
+{% endblock %}

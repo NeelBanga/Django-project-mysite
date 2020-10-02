@@ -1,0 +1,30 @@
+{% extends "main/header.html" %}
+
+{% block content %}
+    <form method="POST" class="card" style="padding: 20px; width: 300px; margin-left: 450px;">
+        {% csrf_token %}
+        username
+        <input type="text" name="username">
+        <br>
+
+        email
+        <input type="email" name="Email">
+        <br>
+
+        password
+        <input type="password" name="password1">
+        <br>
+
+        confirm password
+        <input type="password" name="password2">
+        <!-- {% for fields in form %}
+            {{fields.label}}
+            {{fields}}
+            <br>
+        {% endfor %} -->
+        <br>
+        <button class="btn" style="background-color:blanchedalmond;color: black;" type="submit">register</button>
+    </form>
+    If you already have an account, <a href="/login"><strong>login</strong></a> instead.
+{% endblock %}
+
